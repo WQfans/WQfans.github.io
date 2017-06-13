@@ -5,10 +5,12 @@
   <title>小巷在这里</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
-	<div id='body-wrapper'>
-		{{a}}
+	<div id='body-wrapper' class='body-wrapper'>
+		{{title}}
+		<div :class="[menuOpen ? 'menuopen': 'menuclose']"></div>
 	</div>
 	<script src='./vue.js'></script>
 	<script src='./index.js'></script>

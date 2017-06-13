@@ -1,7 +1,8 @@
-var data = { a: 1 }
+var data = { 
+	title: "小巷的空间" ,
+	menuOpen: false
+}
 var vm = new Vue({
   el: '#body-wrapper',
   data: data
 })
-
-vm.a = 100
