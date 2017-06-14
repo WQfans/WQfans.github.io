@@ -1,11 +1,77 @@
 body {
-	background-color: black;
+    background-color: black;
 }
-.body-wrapper{
-	width: 1280px;
-	height: 720px;
-	margin: 100px auto;
-	text-align: center;
-	background: url(./img/background.jpg) no-repeat;
-	background-size: 100% 100%;
+
+.body-wrapper {
+    width: 1280px;
+    height: 720px;
+    margin: 100px auto;
+    text-align: center;
+    background: url(./img/background.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.menu {
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.menu .menubox {
+	position: relative;
+	top:10px;
+    display: block;
+    width: 40px;
+    height: 24px;
+}
+
+.menuInner:after,
+.menuInner:before {
+    display: block;
+    content: "";
+}
+
+.menuInner,
+.menuInner:after,
+.menuInner:before {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #fff;
+    
+}
+.menuInner{
+	opacity: 0.5;
+}
+.menuInner:after,
+.menuInner:before{
+	opacity: 1;
+}
+    
+.menu .menuInner {
+    top: -10px;
+}
+
+.menu .menuInner:before {
+    top: 10px;
+}
+.menu .menuInner:after {
+    top: 20px;
+}
+.menuopen .menuInner {
+    transform: translate3d(0,20px,0) rotate(45deg);
+    opacity: 0.5;
+}
+.menuopen .menuInner:before {
+	transform: rotate(-45deg) translate3d(-5.71429px,-6px,0);
+    opacity: 0;
+}
+
+.menuopen .menuInner:after {
+    transform: translate3d(0,-20px,0) rotate(-90deg);
+    opacity: 1;
 }

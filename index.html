@@ -9,8 +9,13 @@
 </head>
 <body>
 	<div id='body-wrapper' class='body-wrapper'>
+		<div class="menu" v-on:click="clickmenu">
+			<div class="menubox" :class="[menuOpen ? 'menuopen': 'menuclose']">
+				<div class="menuInner"></div>
+			</div>
+		</div>
 		{{title}}
-		<div :class="[menuOpen ? 'menuopen': 'menuclose']"></div>
+		<div></div>
 	</div>
 	<script src='./vue.js'></script>
 	<script src='./index.js'></script>

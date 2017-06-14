@@ -4,5 +4,11 @@ var data = {
 }
 var vm = new Vue({
   el: '#body-wrapper',
-  data: data
+  data: data,
+  methods:{
+  	clickmenu: function(){
+  		console.log(this.menuOpen)
+  		this.menuOpen = !this.menuOpen;
+  	}
+  }
 })
